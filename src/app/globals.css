@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Brand Colors */
+  --gold: #C5A059;
+  --gold-foreground: #ffffff;
+
+  /* Base - Light Mode */
+  --background: #f6f7f8;
+  --foreground: #111821;
+
+  --card: #ffffff;
+  --card-foreground: #111821;
+
+  --popover: #ffffff;
+  --popover-foreground: #111821;
+
+  /* Primary - Blue #1763cf */
+  --primary: #1763cf;
+  --primary-foreground: #ffffff;
+
+  /* Secondary - Soft Slate */
+  --secondary: #e2e8f0;
+  --secondary-foreground: #1e293b;
+
+  /* Muted */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  /* Accent */
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+
+  /* Destructive */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #1763cf;
+
+  --radius: 0.5rem;
+
+  /* Charts (Optional) */
+  --chart-1: #1763cf;
+  --chart-2: #C5A059;
+  --chart-3: #0f4c81;
+  --chart-4: #e2e8f0;
+  --chart-5: #64748b;
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111821;
+  --sidebar-primary: #1763cf;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #111821;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #1763cf;
+}
+
+.dark {
+  /* Base - Dark Mode */
+  --background: #111821;
+  --foreground: #f6f7f8;
+
+  --card: #1a2332;
+  --card-foreground: #f6f7f8;
+
+  --popover: #1a2332;
+  --popover-foreground: #f6f7f8;
+
+  /* Primary */
+  --primary: #3b82f6;
+  /* Lighter blue for dark mode */
+  --primary-foreground: #ffffff;
+
+  /* Secondary */
+  --secondary: #1e293b;
+  --secondary-foreground: #f6f7f8;
+
+  /* Muted */
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+
+  /* Accent */
+  --accent: #1e293b;
+  --accent-foreground: #f6f7f8;
+
+  /* Destructive */
+  --destructive: #7f1d1d;
+  --destructive-foreground: #f6f7f8;
+
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #3b82f6;
+
+  /* Sidebar */
+  --sidebar: #111821;
+  --sidebar-foreground: #f6f7f8;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1e293b;
+  --sidebar-accent-foreground: #f6f7f8;
+  --sidebar-border: #1e293b;
+  --sidebar-ring: #3b82f6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Custom Utilities */
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-md border border-white/50 shadow-sm;
+  }
+
+  .dark .glass-panel {
+    @apply bg-black/60 backdrop-blur-md border border-white/10 shadow-sm;
+  }
 }

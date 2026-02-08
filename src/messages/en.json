@@ -1,0 +1,104 @@
+{
+  "Hero": {
+    "badge": "Excellence in Zurich",
+    "title": "Precision. Elegance. <italic>Your Smile.</italic>",
+    "subtitle": "Experience world-class Swiss dental care where artistry meets medical precision in an atmosphere of absolute tranquility.",
+    "cta_primary": "Book Your Visit",
+    "cta_secondary": "Clinic Tour"
+  },
+  "Header": {
+    "nav": {
+      "treatments": "Treatments",
+      "technology": "Technology",
+      "team": "Our Team",
+      "clinic": "Zurich Clinic"
+    },
+    "book": "Book Consultation"
+  },
+  "Team": {
+    "title": "Meet Our Specialists",
+    "subtitle": "Experience Swiss precision and personalized care from our world-renowned team of experts dedicated to your perfect smile.",
+    "filters": {
+      "all": "All Specialists",
+      "implantology": "Implantology",
+      "cosmetic": "Aesthetics",
+      "orthodontics": "Orthodontics",
+      "periodontics": "Periodontics"
+    },
+    "profile": {
+      "experience": "Experience",
+      "patients": "Patients",
+      "rating": "Rating",
+      "biography": "Biography",
+      "education": "Education",
+      "book": "Schedule Consultation"
+    },
+    "members": {
+      "weber": {
+        "name": "Dr. Stefan Weber",
+        "role": "Medical Director & Implantologist",
+        "category": "implantology",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuArhKFLeaa9xzOXbf4wHzIuOhKqQ4Lnh5rW-m1q4ANyWRljkYmpRoG_RgD6fIxeJ6m080gNJrv9cjVg0GfnNStEaP3HbyqGBK841sml9xtsh2zvewTsxX0le9YcM5njFyJKSVJ3j3k7v7QzQyiatUnr1Rj-iAjS5qZTB-P9iBO_qDaM63kg4QiHfp5119njGqawvzhM06ZiKVVDM0Z7Cy6Lz-sUsTAXCgvGR0LkbgjP5zG3wnJ5ngaK79yz-vV3ddsZmuGBx2_JnMzK",
+        "stats": {
+          "years": "25+ Years",
+          "patients": "8k+",
+          "rating": "5.0"
+        },
+        "bio": "Dr. Weber is a renowned specialist in implantology and oral reconstructive surgery. Graduating with honors from the University of Zurich, he has dedicated his career to the art of smile restoration. His philosophy combines Swiss precision with a holistic approach to patient care.",
+        "education": "University of Zurich - DDS, Swiss Board of Implantology"
+      },
+      "rossi": {
+        "name": "Dr. Elena Rossi",
+        "role": "Lead Orthodontist",
+        "category": "orthodontics",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-BHXsDnsvMn270cI_UywNmdH5ZzYxK0-za50Yxe4BZegMwct5db0bg2fDYOjXpRByAeFQ61UBByQUj0jj-fnn_Qq0cvDGctwUIKZEmyAwdUeF8SkVKI2kmtlH3jPK9kAMbmQr4_EAeIB3XtZPh1-vrWBi3AHggjj-qPnCknvhGUY-qXvyHJdwA3tVKWp2EfsHnxsB1qlEuDd9Z6mVG3C4fmHwJMH0l1sEOWUX_wmtMgIVT-iR99ksi5btxwGT8rV50BJzVa9xOq99",
+        "stats": {
+          "years": "15+ Years",
+          "patients": "4k+",
+          "rating": "4.9"
+        },
+        "bio": "Specializing in invisible orthodontics, Dr. Rossi is dedicated to creating perfect smiles for patients of all ages using the latest aligner technology.",
+        "education": "University of Bern - Orthodontics, Invisalign Diamond Provider"
+      },
+      "bianchi": {
+        "name": "Dr. Marco Bianchi",
+        "role": "Aesthetic Specialist",
+        "category": "cosmetic",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBK5ongQMhI69u3XtwtwouMZR016QeTD9o6ph2bKMBM0jLDi8S0M5YaG6vUhlKKC0aJB2QPvtR3zFVZ5FlkFClZdMCvoLWDqZSleqSpi62EakB1W4CQsMwvJABbzCSGzNIEd5Nrsiifqxr5zz1dEEfRGJWlbOPmu6IXrlHoQXipDdIKsF_ctDOYq4kEj9kQmDGYS7BKndyuL8eSmqX0rLUkbGzZ8mdo3ERTOBERFsVN_xLcXyxqoOHpPDA7qXIhcofymxqAmx4Jx-Kj",
+        "stats": {
+          "years": "12+ Years",
+          "patients": "3k+",
+          "rating": "4.9"
+        },
+        "bio": "Expert in complex aesthetic procedures, Dr. Bianchi transforms smiles using ultra-thin veneers and digital smile design principles.",
+        "education": "University of Geneva - DMD, American Academy of Cosmetic Dentistry"
+      },
+      "meier": {
+        "name": "Dr. Sarah Meier",
+        "role": "Periodontist",
+        "category": "periodontics",
+        "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "18+ Years",
+          "patients": "5k+",
+          "rating": "4.9"
+        },
+        "bio": "Dr. Meier focuses on the foundation of your smile—healthy gums. She utilizes minimally invasive laser techniques for periodontal therapy.",
+        "education": "University of Zurich - Periodontology, Swiss Society of Periodontology"
+      },
+      "fischer": {
+        "name": "Dr. Thomas Fischer",
+        "role": "Endodontist",
+        "category": "general",
+        "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=2864",
+        "stats": {
+          "years": "10+ Years",
+          "patients": "2k+",
+          "rating": "4.8"
+        },
+        "bio": "Dedicated to saving natural teeth, Dr. Fischer specializes in microscopic root canal treatments ensures pain-free procedures.",
+        "education": "University of Basel - DMD, European Society of Endodontology"
+      }
+    }
+  }
+}

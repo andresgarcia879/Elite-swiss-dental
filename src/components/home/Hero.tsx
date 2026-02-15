@@ -162,6 +162,21 @@ export const Hero = () => {
                             </p>
                         </div>
                     </div>
+
+                    {/* Mobile "Swiss Certified" Card (Below Reviews < lg) */}
+                    <div className="hero-text-element mt-8 lg:hidden bg-white/80 backdrop-blur-md border border-white/60 p-4 pr-6 rounded-2xl shadow-sm flex items-center gap-4 w-fit">
+                        <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                            <CheckCircle className="size-6" strokeWidth={2.5} />
+                        </div>
+                        <div>
+                            <p className="text-[10px] font-extrabold text-slate-500 uppercase tracking-widest mb-0.5">
+                                {t("certified_card.title")}
+                            </p>
+                            <h4 className="text-sm font-bold text-slate-900 leading-tight">
+                                {t("certified_card.subtitle")}
+                            </h4>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Right Column: Image with Organic Shape */}
@@ -193,10 +208,10 @@ export const Hero = () => {
                         <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/10 to-transparent pointer-events-none" />
                     </div>
 
-                    {/* Floating "Swiss Certified" Card */}
-                    <div className="hero-floating-card absolute -bottom-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-24 md:-left-8 lg:bottom-32 lg:-left-12 bg-white/90 backdrop-blur-xl border border-white/60 p-4 pr-6 md:p-5 md:pr-8 rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center gap-3 md:gap-5 z-20 w-max hover:scale-105 transition-transform duration-300">
-                        <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 shadow-inner">
-                            <CheckCircle className="size-5 md:size-7" strokeWidth={2.5} />
+                    {/* Floating "Swiss Certified" Card (Desktop Only >= lg) */}
+                    <div className="hero-floating-card hidden lg:flex absolute bottom-32 -left-12 bg-white/90 backdrop-blur-xl border border-white/60 p-5 pr-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] items-center gap-5 z-20 max-w-[320px] hover:scale-105 transition-transform duration-300">
+                        <div className="w-14 h-14 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                            <CheckCircle className="size-7" strokeWidth={2.5} />
                         </div>
                         <div>
                             <p className="text-[11px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">

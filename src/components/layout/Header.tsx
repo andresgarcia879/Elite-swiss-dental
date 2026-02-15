@@ -12,8 +12,10 @@ import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 const Header = () => {
     const t = useTranslations('Header');
     const [isScrolled, setIsScrolled] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
         };
@@ -68,29 +70,35 @@ const Header = () => {
                 </div>
 
                 {/* Mobile Menu */}
-                <Sheet>
-                    <SheetTrigger asChild>
-                        <Button variant="ghost" size="icon" className="md:hidden text-muted-foreground hover:text-primary">
-                            <Menu className="h-6 w-6" />
-                        </Button>
-                    </SheetTrigger>
-                    <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                        <nav className="flex flex-col gap-4 mt-8">
-                            {navLinks.map((item) => (
-                                <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                                >
-                                    {item.name}
+                {mounted ? (
+                    <Sheet>
+                        <SheetTrigger asChild>
+                            <Button variant="ghost" size="icon" className="md:hidden text-muted-foreground hover:text-primary">
+                                <Menu className="h-6 w-6" />
+                            </Button>
+                        </SheetTrigger>
+                        <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                            <nav className="flex flex-col gap-4 mt-8">
+                                {navLinks.map((item) => (
+                                    <Link
+                                        key={item.href}
+                                        href={item.href}
+                                        className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ))}
+                                <Link href="/contact" className="w-full mt-4">
+                                    <Button className="w-full rounded-full font-bold">{t('book')}</Button>
                                 </Link>
-                            ))}
-                            <Link href="/contact" className="w-full mt-4">
-                                <Button className="w-full rounded-full font-bold">{t('book')}</Button>
-                            </Link>
-                        </nav>
-                    </SheetContent>
-                </Sheet>
+                            </nav>
+                        </SheetContent>
+                    </Sheet>
+                ) : (
+                    <div className="md:hidden p-2">
+                        <Menu className="h-6 w-6 text-muted-foreground" />
+                    </div>
+                )}
             </nav>
         </header>
     );

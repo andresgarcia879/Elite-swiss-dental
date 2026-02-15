@@ -1,10 +1,21 @@
 {
+  "Metadata": {
+    "title": "Elite Swiss Dental | Zurich",
+    "description": "Experience world-class Swiss dental care where artistry meets medical precision."
+  },
   "Hero": {
     "badge": "Excellence in Zurich",
-    "title": "Precision. Elegance. <italic>Your Smile.</italic>",
+    "title_part1": "Precision.",
+    "title_part2": "Elegance.",
+    "title_part3": "Your Smile.",
     "subtitle": "Experience world-class Swiss dental care where artistry meets medical precision in an atmosphere of absolute tranquility.",
     "cta_primary": "Book Your Visit",
-    "cta_secondary": "Clinic Tour"
+    "cta_secondary": "Clinic Tour",
+    "trusted_by": "Trusted by Zurich's Elite",
+    "certified_card": {
+      "title": "SWISS CERTIFIED",
+      "subtitle": "Top Rated Clinic 2024"
+    }
   },
   "Header": {
     "nav": {
@@ -23,7 +34,8 @@
       "implantology": "Implantology",
       "cosmetic": "Aesthetics",
       "orthodontics": "Orthodontics",
-      "periodontics": "Periodontics"
+      "periodontics": "Periodontics",
+      "general": "General Dentistry"
     },
     "profile": {
       "experience": "Experience",
@@ -40,12 +52,12 @@
         "category": "implantology",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuArhKFLeaa9xzOXbf4wHzIuOhKqQ4Lnh5rW-m1q4ANyWRljkYmpRoG_RgD6fIxeJ6m080gNJrv9cjVg0GfnNStEaP3HbyqGBK841sml9xtsh2zvewTsxX0le9YcM5njFyJKSVJ3j3k7v7QzQyiatUnr1Rj-iAjS5qZTB-P9iBO_qDaM63kg4QiHfp5119njGqawvzhM06ZiKVVDM0Z7Cy6Lz-sUsTAXCgvGR0LkbgjP5zG3wnJ5ngaK79yz-vV3ddsZmuGBx2_JnMzK",
         "stats": {
-          "years": "25+ Years",
+          "years": "25+",
           "patients": "8k+",
           "rating": "5.0"
         },
-        "bio": "Dr. Weber is a renowned specialist in implantology and oral reconstructive surgery. Graduating with honors from the University of Zurich, he has dedicated his career to the art of smile restoration. His philosophy combines Swiss precision with a holistic approach to patient care.",
-        "education": "University of Zurich - DDS, Swiss Board of Implantology"
+        "bio": "Dr. Weber is a renowned specialist in implantology and oral reconstructive surgery. Graduating with honors from the University of Zurich, he has dedicated his career to the art of smile restoration.",
+        "education": "University of Zurich - DDS"
       },
       "rossi": {
         "name": "Dr. Elena Rossi",
@@ -53,12 +65,12 @@
         "category": "orthodontics",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-BHXsDnsvMn270cI_UywNmdH5ZzYxK0-za50Yxe4BZegMwct5db0bg2fDYOjXpRByAeFQ61UBByQUj0jj-fnn_Qq0cvDGctwUIKZEmyAwdUeF8SkVKI2kmtlH3jPK9kAMbmQr4_EAeIB3XtZPh1-vrWBi3AHggjj-qPnCknvhGUY-qXvyHJdwA3tVKWp2EfsHnxsB1qlEuDd9Z6mVG3C4fmHwJMH0l1sEOWUX_wmtMgIVT-iR99ksi5btxwGT8rV50BJzVa9xOq99",
         "stats": {
-          "years": "15+ Years",
+          "years": "15+",
           "patients": "4k+",
           "rating": "4.9"
         },
         "bio": "Specializing in invisible orthodontics, Dr. Rossi is dedicated to creating perfect smiles for patients of all ages using the latest aligner technology.",
-        "education": "University of Bern - Orthodontics, Invisalign Diamond Provider"
+        "education": "University of Bern - Orthodontics"
       },
       "bianchi": {
         "name": "Dr. Marco Bianchi",
@@ -66,12 +78,12 @@
         "category": "cosmetic",
         "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBK5ongQMhI69u3XtwtwouMZR016QeTD9o6ph2bKMBM0jLDi8S0M5YaG6vUhlKKC0aJB2QPvtR3zFVZ5FlkFClZdMCvoLWDqZSleqSpi62EakB1W4CQsMwvJABbzCSGzNIEd5Nrsiifqxr5zz1dEEfRGJWlbOPmu6IXrlHoQXipDdIKsF_ctDOYq4kEj9kQmDGYS7BKndyuL8eSmqX0rLUkbGzZ8mdo3ERTOBERFsVN_xLcXyxqoOHpPDA7qXIhcofymxqAmx4Jx-Kj",
         "stats": {
-          "years": "12+ Years",
+          "years": "12+",
           "patients": "3k+",
           "rating": "4.9"
         },
         "bio": "Expert in complex aesthetic procedures, Dr. Bianchi transforms smiles using ultra-thin veneers and digital smile design principles.",
-        "education": "University of Geneva - DMD, American Academy of Cosmetic Dentistry"
+        "education": "University of Geneva - DMD"
       },
       "meier": {
         "name": "Dr. Sarah Meier",
@@ -79,12 +91,12 @@
         "category": "periodontics",
         "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=2070",
         "stats": {
-          "years": "18+ Years",
+          "years": "18+",
           "patients": "5k+",
           "rating": "4.9"
         },
         "bio": "Dr. Meier focuses on the foundation of your smile—healthy gums. She utilizes minimally invasive laser techniques for periodontal therapy.",
-        "education": "University of Zurich - Periodontology, Swiss Society of Periodontology"
+        "education": "University of Zurich - Periodontology"
       },
       "fischer": {
         "name": "Dr. Thomas Fischer",
@@ -92,13 +104,429 @@
         "category": "general",
         "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=2864",
         "stats": {
-          "years": "10+ Years",
+          "years": "10+",
           "patients": "2k+",
           "rating": "4.8"
         },
         "bio": "Dedicated to saving natural teeth, Dr. Fischer specializes in microscopic root canal treatments ensures pain-free procedures.",
-        "education": "University of Basel - DMD, European Society of Endodontology"
+        "education": "University of Basel - DMD"
+      },
+      "wagner": {
+        "name": "Dr. Lukas Wagner",
+        "role": "Oral Surgeon",
+        "category": "implantology",
+        "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "14+",
+          "patients": "3.5k+",
+          "rating": "4.9"
+        },
+        "bio": "Dr. Wagner is a master of precision oral surgery, handling complex extractions and bone augmentations with minimal invasiveness.",
+        "education": "University of Vienna - Oral Surgery"
+      },
+      "schneider": {
+        "name": "Dr. Hannah Schneider",
+        "role": "Pediatric Dentist",
+        "category": "general",
+        "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "9+",
+          "patients": "6k+",
+          "rating": "5.0"
+        },
+        "bio": "Dr. Schneider creates a fun and safe environment for children, ensuring their first dental experiences are positive and fear-free.",
+        "education": "University of Munich - Pediatric Dentistry"
+      },
+      "keller": {
+        "name": "Dr. Andreas Keller",
+        "role": "Prosthodontist",
+        "category": "implantology",
+        "image": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "20+",
+          "patients": "7k+",
+          "rating": "4.9"
+        },
+        "bio": "Specializing in the restoration and replacement of teeth, Dr. Keller crafts custom prosthetics that look and feel completely natural.",
+        "education": "University of Zurich - Prosthodontics"
+      },
+      "hofmann": {
+        "name": "Dr. Julia Hofmann",
+        "role": "Aesthetic Dentist",
+        "category": "cosmetic",
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=2069",
+        "stats": {
+          "years": "11+",
+          "patients": "2.8k+",
+          "rating": "4.8"
+        },
+        "bio": "Dr. Hofmann combines artistry with dentistry to offer teeth whitening and bonding treatments that brighten your smile instantly.",
+        "education": "University of Basel - Aesthetic Dentistry"
+      },
+      "zimmer": {
+        "name": "Dr. Martin Zimmer",
+        "role": "Orthodontist",
+        "category": "orthodontics",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=2069",
+        "stats": {
+          "years": "16+",
+          "patients": "5k+",
+          "rating": "4.9"
+        },
+        "bio": "With a focus on early intervention, Dr. Zimmer corrects bite issues in adolescents and adults for long-term oral health.",
+        "education": "University of Geneva - Orthodontics"
+      },
+      "peters": {
+        "name": "Dr. Laura Peters",
+        "role": "Periodontist",
+        "category": "periodontics",
+        "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=2061",
+        "stats": {
+          "years": "13+",
+          "patients": "3.2k+",
+          "rating": "4.9"
+        },
+        "bio": "Dr. Peters treats gum disease with compassion and expertise, helping patients maintain strong foundations for their teeth.",
+        "education": "University of Bern - Periodontology"
+      },
+      "richter": {
+        "name": "Dr. Klaus Richter",
+        "role": "General Dentist",
+        "category": "general",
+        "image": "https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "22+",
+          "patients": "10k+",
+          "rating": "4.9"
+        },
+        "bio": "A veteran of general practice, Dr. Richter handles comprehensive checkups and complex restorative cases with steady hands.",
+        "education": "Heidelberg University - Dentistry"
+      },
+      "schwarz": {
+        "name": "Dr. Monika Schwarz",
+        "role": "Cosmetic Surgeon",
+        "category": "cosmetic",
+        "image": "https://images.unsplash.com/photo-1590611936760-eeb9bc598548?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "19+",
+          "patients": "4.5k+",
+          "rating": "5.0"
+        },
+        "bio": "Dr. Schwarz specializes in gum contouring and facial aesthetics to frame your smile perfectly.",
+        "education": "Charité Berlin - Maxillofacial Surgery"
+      },
+      "weiss": {
+        "name": "Dr. Simon Weiss",
+        "role": "Endodontist",
+        "category": "general",
+        "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "8+",
+          "patients": "1.5k+",
+          "rating": "4.8"
+        },
+        "bio": "Using the latest in imaging technology, Dr. Weiss performs precise root canals that save teeth others might extract.",
+        "education": "University of Zurich - Endodontics"
+      },
+      "braun": {
+        "name": "Dr. Claudia Braun",
+        "role": "Orthodontist",
+        "category": "orthodontics",
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=2088",
+        "stats": {
+          "years": "10+",
+          "patients": "3k+",
+          "rating": "4.8"
+        },
+        "bio": "Dr. Braun is an expert in lingual braces, offering truly invisible correction for the most discerning clients.",
+        "education": "University of Frankfurt - Orthodontics"
+      },
+      "krueger": {
+        "name": "Dr. Paul Krueger",
+        "role": "Implantologist",
+        "category": "implantology",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "17+",
+          "patients": "6.5k+",
+          "rating": "4.9"
+        },
+        "bio": "Dr. Krueger utilizes 3D guided surgery to place implants with sub-millimeter accuracy for immediate loading.",
+        "education": "University of Zurich - Implantology"
+      },
+      "schulz": {
+        "name": "Dr. Anja Schulz",
+        "role": "Periodontist",
+        "category": "periodontics",
+        "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=2064",
+        "stats": {
+          "years": "14+",
+          "patients": "4k+",
+          "rating": "4.9"
+        },
+        "bio": "Dr. Schulz focuses on regenerative periodontal therapies to restore lost bone and tissue around teeth.",
+        "education": "University of Bern - Periodontology"
+      },
+      "lang": {
+        "name": "Dr. Robert Lang",
+        "role": "Cosmetic Dentist",
+        "category": "cosmetic",
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "11+",
+          "patients": "2.9k+",
+          "rating": "4.8"
+        },
+        "bio": "Dr. Lang creates Hollywood-style transformations using high-strength ceramic veneers.",
+        "education": "University of Geneva - Aesthetic Dentistry"
+      },
+      "vogel": {
+        "name": "Dr. Katja Vogel",
+        "role": "General Dentist",
+        "category": "general",
+        "image": "https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=2069",
+        "stats": {
+          "years": "9+",
+          "patients": "2.5k+",
+          "rating": "4.9"
+        },
+        "bio": "Dr. Vogel provides preventative care and routine maintenance to keep your smile healthy for a lifetime.",
+        "education": "University of Zurich - Dentistry"
+      },
+      "jung": {
+        "name": "Dr. Felix Jung",
+        "role": "Oral Surgeon",
+        "category": "implantology",
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=2070",
+        "stats": {
+          "years": "13+",
+          "patients": "3.8k+",
+          "rating": "4.9"
+        },
+        "bio": "Dr. Jung specializes in sedation dentistry, making oral surgery a comfortable experience for anxious patients.",
+        "education": "University of Vienna - Oral Surgery"
       }
     }
+  },
+  "Services": {
+    "title": "Curated Treatments",
+    "subtitle": "We combine Swiss precision with artistic excellence to craft your perfect smile through our bespoke dental services.",
+    "cards": {
+      "cosmetic": {
+        "title": "Cosmetic Dentistry",
+        "description": "Veneers, whitening, and smile makeovers designed for natural beauty using ultra-thin porcelain."
+      },
+      "implant": {
+        "title": "Implantology",
+        "description": "State-of-the-art Swiss implants for lasting function and aesthetics, restoring your confidence completely."
+      },
+      "ortho": {
+        "title": "Orthodontics",
+        "description": "Invisible alignment solutions including Invisalign for discreet correction suitable for adults and teens."
+      }
+    },
+    "learnMore": "Learn More"
+  },
+  "Testimonials": {
+    "title": "Patient Stories",
+    "subtitle": "Real experiences from patients who entrusted us with their smiles.",
+    "list": {
+      "isabelle": {
+        "text": "The attention to detail is unmatched. Truly a luxury experience from the moment you walk in. My veneers look incredibly natural."
+      },
+      "mark": {
+        "text": "I felt completely at ease. The anxiety-free dentistry option changed my life. The results are better than I imagined."
+      },
+      "sarah": {
+        "text": "Professional, clean, and incredibly modern. The 3D imaging technology they used to explain my treatment was impressive."
+      }
+    }
+  },
+  "CTA": {
+    "badge": "Start Your Journey",
+    "title_part1": "Ready for your",
+    "title_part2": "perfect smile?",
+    "description": "Schedule a comprehensive consultation with our specialists today and discover the difference of Elite Swiss Dental.",
+    "button": "Book Consultation"
+  },
+  "Footer": {
+    "brand_description": "Experience world-class Swiss dental care where artistry meets medical precision in an atmosphere of absolute tranquility.",
+    "columns": {
+      "treatments": "Treatments",
+      "contact": "Contact Us",
+      "hours": "Opening Hours"
+    },
+    "days": {
+      "mon_fri": "Mon - Fri",
+      "sat": "Saturday",
+      "sun": "Sunday"
+    },
+    "emergency": "Emergency Only",
+    "rights": "Elite Swiss Dental. All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "imprint": "Imprint"
+    },
+    "treatments_list": {
+      "cosmetic": "Cosmetic Dentistry",
+      "implant": "Implantology",
+      "ortho": "Orthodontics",
+      "general": "General Dentistry",
+      "pediatric": "Pediatric"
+    }
+  },
+  "TreatmentsPage": {
+    "hero": {
+      "title": "World-Class Treatments",
+      "description": "Comprehensive dental solutions tailored to your unique needs, performed with Swiss precision and artistic excellence."
+    },
+    "categories": {
+      "cosmetic": {
+        "title": "Cosmetic Dentistry",
+        "description": "Transform your smile with our aesthetic treatments designed for natural-looking results.",
+        "items": {
+          "veneers": "<strong>Porcelain Veneers:</strong> Custom-made shells for a flawless smile.",
+          "whitening": "<strong>Professional Whitening:</strong> Brighten your teeth safely and effectively.",
+          "makeover": "<strong>Smile Makeover:</strong> A comprehensive plan to redesign your smile."
+        }
+      },
+      "implant": {
+        "title": "Implantology",
+        "description": "Restore function and confidence with state-of-the-art dental implants.",
+        "items": {
+          "single": "<strong>Single Tooth Implants:</strong> The gold standard for replacing missing teeth.",
+          "all_on_4": "<strong>All-on-4®:</strong> Full arch restoration for immediate function.",
+          "bone": "<strong>Bone Regeneration:</strong> Advanced procedures to build a solid foundation."
+        }
+      },
+      "ortho": {
+        "title": "Orthodontics",
+        "description": "Align your teeth discreetly with modern orthodontic solutions.",
+        "items": {
+          "invisalign": "<strong>Invisalign®:</strong> Clear aligners for invisible teeth straightening.",
+          "ceramic": "<strong>Ceramic Braces:</strong> Aesthetic brackets that blend with your teeth."
+        }
+      },
+      "general": {
+        "title": "General Care",
+        "description": "Maintain optimal oral health with our preventive services.",
+        "items": {
+          "hygiene": "<strong>Dental Hygiene:</strong> Thorough cleaning to prevent gum disease.",
+          "root_canal": "<strong>Root Canal Therapy:</strong> Pain-free treatment to save infected teeth.",
+          "emergency": "<strong>Emergency Care:</strong> Immediate attention for urgent dental needs."
+        }
+      }
+    },
+    "technology": {
+      "title": "Advanced Technology",
+      "description": "Our clinic is equipped with the latest 3D imaging, laser dentistry, and digital impression systems to ensure the most accurate diagnoses and comfortable treatments available today."
+    }
+  },
+  "TechnologyPage": {
+    "title": "Cutting-Edge Technology",
+    "description": "We invest in the most advanced dental technologies to ensure precise diagnostics, minimally invasive treatments, and exceptional results.",
+    "hero": {
+      "title": "Advanced Swiss Dental Technology",
+      "subtitle": "Precision-driven innovation for safer, faster and more predictable treatments."
+    },
+    "grid": {
+      "cbct": {
+        "title": "3D CBCT Imaging",
+        "description": "High-resolution 3D visualizations for precise implant planning and diagnostics."
+      },
+      "scanner": {
+        "title": "Intraoral Scanner",
+        "description": "Digital impressions without the discomfort of traditional molds."
+      },
+      "cadcam": {
+        "title": "CAD/CAM Digital Lab",
+        "description": "Same-day ceramic restorations designed and milled with micron-level accuracy."
+      },
+      "guided": {
+        "title": "Guided Implant Surgery",
+        "description": "Computer-guided placement for minimally invasive procedures and faster healing."
+      },
+      "smile": {
+        "title": "Digital Smile Design",
+        "description": "Visualize your new smile before we even begin treatment."
+      },
+      "sterilization": {
+        "title": "Advanced Sterilization",
+        "description": "Hospital-grade sterilization protocols exceeding Swiss safety standards."
+      }
+    }
+  },
+  "ClinicPage": {
+    "hero": {
+      "title": "A Sanctuary for\nDental Excellence",
+      "subtitle": "Experience the perfect balance of Swiss precision, medical innovation, and architectural serenity."
+    },
+    "philosophy": {
+      "title": "Designed for Tranquility",
+      "description": "We believe that the environment is an integral part of the healing process. Our clinic on Bahnhofstrasse was conceived not as a medical facility, but as a private retreat. \n\nMinimalist aesthetics, natural materials, and soft lighting create an atmosphere of calm that allows you to relax completely while our specialists care for your smile."
+    },
+    "features": {
+      "concierge": {
+        "title": "Patient Concierge",
+        "description": "A dedicated team to manage your appointments, travel arrangements, and personalized needs."
+      },
+      "privacy": {
+        "title": "Private Suites",
+        "description": "Soundproofed treatment suites ensure your conversation and procedures remain strictly confidential."
+      },
+      "technology": {
+        "title": "On-Site Laboratory",
+        "description": "Our master technicians work just steps away to customize your restorations instantly."
+      }
+    },
+    "gallery": {
+      "title": "Inside the Clinic"
+    },
+    "location": {
+      "title": "In the Heart of Zurich",
+      "description": "Conveniently located on the Bahnhofstrasse, surrounded by the city's finest boutiques and hotels."
+    },
+    "address": {
+      "title": "Address",
+      "details": "Bahnhofstrasse 12,\n8001 Zurich,\nSwitzerland"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "details": "Monday - Friday: 08:00 - 19:00\nSaturday: By Appointment\nSunday: Closed"
+    }
+  },
+  "ContactPage": {
+    "title": "Book Your Consultation",
+    "subtitle": "Take the first step towards your perfect smile. Use our advanced booking system to choose your specialist or treatment.",
+    "info": {
+      "visit": {
+        "title": "Visit Us"
+      },
+      "contact": {
+        "title": "Contact"
+      },
+      "hours": {
+        "title": "Opening Hours"
+      }
+    }
+  },
+  "Booking": {
+    "title": "Book Appointment",
+    "filters": {
+      "all": "All Treatments",
+      "implantology": "Implantology",
+      "cosmetic": "Cosmetic",
+      "orthodontics": "Orthodontics",
+      "periodontics": "Periodontics"
+    },
+    "steps": {
+      "preference": "Preference",
+      "selection": "Selection",
+      "datetime": "Date & Time",
+      "details": "Details"
+    },
+    "meta_title": "Book Appointment | Elite Swiss Dental",
+    "meta_description": "Schedule your visit with our expert team."
   }
 }

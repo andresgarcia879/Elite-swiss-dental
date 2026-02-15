@@ -1,7 +1,13 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+    const t = useTranslations("Footer");
+
     return (
         <footer className="bg-slate-900 text-white pt-24 pb-12 rounded-t-[3rem] mt-10 relative overflow-hidden">
             {/* Background patterns */}
@@ -19,7 +25,7 @@ const Footer = () => {
                             <h2 className="text-xl font-serif font-bold">Elite Swiss Dental</h2>
                         </Link>
                         <p className="text-slate-400 leading-relaxed text-sm">
-                            Experience world-class Swiss dental care where artistry meets medical precision in an atmosphere of absolute tranquility.
+                            {t("brand_description")}
                         </p>
                         <div className="flex gap-4 mt-2">
                             <Link href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors">
@@ -36,19 +42,19 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div className="flex flex-col gap-6">
-                        <h3 className="font-serif text-lg font-semibold text-white">Treatments</h3>
+                        <h3 className="font-serif text-lg font-semibold text-white">{t("columns.treatments")}</h3>
                         <div className="flex flex-col gap-4">
-                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Cosmetic Dentistry</Link>
-                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Implantology</Link>
-                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Orthodontics</Link>
-                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">General Dentistry</Link>
-                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Pediatric</Link>
+                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">{t("treatments_list.cosmetic")}</Link>
+                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">{t("treatments_list.implant")}</Link>
+                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">{t("treatments_list.ortho")}</Link>
+                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">{t("treatments_list.general")}</Link>
+                            <Link href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">{t("treatments_list.pediatric")}</Link>
                         </div>
                     </div>
 
                     {/* Contact Info */}
                     <div className="flex flex-col gap-6">
-                        <h3 className="font-serif text-lg font-semibold text-white">Contact Us</h3>
+                        <h3 className="font-serif text-lg font-semibold text-white">{t("columns.contact")}</h3>
                         <div className="flex flex-col gap-4">
                             <div className="flex items-start gap-3 text-slate-400 text-sm">
                                 <MapPin className="size-5 text-primary shrink-0" />
@@ -67,30 +73,30 @@ const Footer = () => {
 
                     {/* Working Hours */}
                     <div className="flex flex-col gap-6">
-                        <h3 className="font-serif text-lg font-semibold text-white">Opening Hours</h3>
+                        <h3 className="font-serif text-lg font-semibold text-white">{t("columns.hours")}</h3>
                         <div className="flex flex-col gap-4 text-sm text-slate-400">
                             <div className="flex justify-between border-b border-white/5 pb-2">
-                                <span>Mon - Fri</span>
+                                <span>{t("days.mon_fri")}</span>
                                 <span className="text-white">08:00 - 20:00</span>
                             </div>
                             <div className="flex justify-between border-b border-white/5 pb-2">
-                                <span>Saturday</span>
+                                <span>{t("days.sat")}</span>
                                 <span className="text-white">09:00 - 18:00</span>
                             </div>
                             <div className="flex justify-between border-b border-white/5 pb-2">
-                                <span>Sunday</span>
-                                <span className="text-primary font-medium">Emergency Only</span>
+                                <span>{t("days.sun")}</span>
+                                <span className="text-primary font-medium">{t("emergency")}</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-                    <p>&copy; {new Date().getFullYear()} Elite Swiss Dental. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} {t("rights")}</p>
                     <div className="flex gap-6">
-                        <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                        <Link href="/imprint" className="hover:text-white transition-colors">Imprint</Link>
+                        <Link href="/privacy" className="hover:text-white transition-colors">{t("links.privacy")}</Link>
+                        <Link href="/terms" className="hover:text-white transition-colors">{t("links.terms")}</Link>
+                        <Link href="/imprint" className="hover:text-white transition-colors">{t("links.imprint")}</Link>
                     </div>
                 </div>
             </div>

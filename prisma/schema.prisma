@@ -8,16 +8,109 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-model Booking {
-  id        String   @id @default(cuid())
+model AdminUser {
+  id        String    @id @default(uuid())
+  name      String
+  email     String    @unique
+  password  String
+  role      AdminRole @default(ADMIN)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+enum AdminRole {
+  ADMIN
+  STAFF
+}
+
+model Doctor {
+  id          String        @id @default(uuid())
+  fullName    String
+  title       String
+  specialty   Specialty     @relation(fields: [specialtyId], references: [id])
+  specialtyId String
+  education   String
+  experience  Int
+  bio         String
+  imageUrl    String
+  isActive    Boolean       @default(true)
+  createdAt   DateTime      @default(now())
+  appointments Appointment[]
+  services    Service[]     @relation("DoctorServices")
+}
+
+model Specialty {
+  id        String    @id @default(uuid())
+  name      String
+  doctors   Doctor[]
+  services  Service[]
+}
+
+model Service {
+  id          String        @id @default(uuid())
+  name        String
+  name_de     String?
+  name_fr     String?
+  name_it     String?
+  duration    Int           @default(60) // Duration in minutes
+  price       Decimal?
+  description String?
+  description_de String?
+  description_fr String?
+  description_it String?
+  benefits    String[]
+  benefits_de String[]
+  benefits_fr String[]
+  benefits_it String[]
+  specialty   Specialty     @relation(fields: [specialtyId], references: [id])
+  specialtyId String
+  appointments Appointment[]
+  doctors     Doctor[]      @relation("DoctorServices")
+}
+
+model Appointment {
+  id            String            @id @default(uuid())
+  fullName      String
+  email         String
+  phone         String?
+  service       Service?          @relation(fields: [serviceId], references: [id])
+  serviceId     String?
+  doctor        Doctor?           @relation(fields: [doctorId], references: [id])
+  doctorId      String?
+  preferredDate DateTime
+  status        AppointmentStatus @default(PENDING)
+  notes         String?
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+model ContactMessage {
+  id        String   @id @default(uuid())
   name      String
   email     String
-  phone     String
-  service   String?
-  date      DateTime @default(now())
-  message   String?
+  message   String
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+}
+
+model LanguageContent {
+  id     String @id @default(uuid())
+  key    String
+  locale Locale
+  value  String
+}
+
+enum Locale {
+  DE
+  FR
+  IT
+  EN
 }
 
 model Newsletter {

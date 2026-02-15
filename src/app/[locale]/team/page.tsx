@@ -1,13 +1,27 @@
-"use client";
-
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { TeamShowcase } from "@/components/team/TeamShowcase";
-import { useTranslations } from "next-intl";
+import TeamShowcase from "@/components/team/TeamShowcase";
+import { getTranslations } from "next-intl/server";
+import prisma from "@/lib/db";
 
-export default function TeamPage() {
-    const t = useTranslations("Team");
+async function getTeamData() {
+    const doctors = await prisma.doctor.findMany({
+        where: { isActive: true },
+        include: { specialty: true },
+        orderBy: { experience: 'desc' }
+    });
+
+    const specialties = await prisma.specialty.findMany({
+        orderBy: { name: 'asc' }
+    });
+
+    return { doctors, specialties };
+}
+
+export default async function TeamPage() {
+    const t = await getTranslations("Team");
+    const { doctors, specialties } = await getTeamData();
 
     return (
         <main className="min-h-screen bg-background">
@@ -19,7 +33,7 @@ export default function TeamPage() {
                 </p>
             </section>
 
-            <TeamShowcase />
+            <TeamShowcase doctors={doctors} specialties={specialties} />
 
             <Footer />
         </main>

@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
@@ -15,10 +16,24 @@ export default function LanguageSwitcher() {
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const handleLocaleChange = (newLocale: string) => {
         router.replace(pathname, { locale: newLocale });
     };
+
+    if (!mounted) {
+        return (
+            <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
+                <Globe className="h-5 w-5" />
+                <span className="sr-only">Switch language</span>
+            </Button>
+        );
+    }
 
     return (
         <DropdownMenu>

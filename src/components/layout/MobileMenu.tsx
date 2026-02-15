@@ -25,50 +25,51 @@ export const MobileMenu = ({ navLinks }: MobileMenuProps) => {
                     <span className="sr-only">Open menu</span>
                 </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-[400px] border-l-0 p-0 overflow-hidden">
+            <SheetContent side="right" className="w-full sm:w-[400px] border-l-0 p-0 z-[100] bg-white">
                 <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                 <SheetDescription className="sr-only">Main Navigation</SheetDescription>
 
-                <div className="flex flex-col h-full bg-white/95 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60">
+                <div className="flex flex-col h-full w-full bg-white text-slate-900">
                     {/* Header inside Menu */}
-                    <div className="flex items-center justify-between p-6 border-b border-slate-100/50">
-                        <div className="flex items-center gap-2">
-                            <div className="size-8 text-primary flex items-center justify-center bg-primary/10 rounded-full">
-                                <Activity className="size-5" />
+                    <div className="flex items-center justify-between p-6 border-b border-slate-100">
+                        <div className="flex items-center gap-3">
+                            <div className="size-10 text-primary flex items-center justify-center bg-primary/10 rounded-full">
+                                <Activity className="size-6" />
                             </div>
-                            <span className="font-serif font-bold text-lg text-slate-900">Elite Swiss</span>
+                            <span className="font-serif font-bold text-xl text-slate-900 tracking-tight">Elite Swiss</span>
                         </div>
-                        {/* Custom Close Button if needed, but SheetContent has one. We'll rely on default or custom styling. */}
+                        <div className="flex items-center justify-center size-10 rounded-full hover:bg-slate-100 transition-colors cursor-pointer" onClick={() => setOpen(false)}>
+                            <X className="size-5 text-slate-500" />
+                        </div>
                     </div>
 
                     {/* Links */}
-                    <div className="flex-1 flex flex-col justify-center px-8 gap-6 -mt-10">
-                        <nav className="flex flex-col gap-6">
-                            {navLinks.map((item, index) => (
+                    <div className="flex-1 flex flex-col px-8 py-8 overflow-y-auto">
+                        <nav className="flex flex-col gap-2">
+                            {navLinks && navLinks.length > 0 ? navLinks.map((item, index) => (
                                 <Link
                                     key={item.href}
                                     href={item.href}
                                     onClick={() => setOpen(false)}
-                                    className="group flex items-center justify-between border-b border-slate-100 pb-4"
+                                    className="group flex items-center justify-between py-4 border-b border-slate-50 last:border-0"
                                 >
-                                    <span className={cn(
-                                        "text-3xl font-serif font-medium text-slate-800 transition-all duration-300 group-hover:text-primary group-hover:translate-x-2",
-                                        "opacity-0 animate-in fade-in slide-in-from-bottom-4 fill-mode-forwards"
-                                    )} style={{ animationDelay: `${index * 100}ms` }}>
+                                    <span className="text-2xl font-serif font-medium text-slate-800 transition-colors group-hover:text-primary">
                                         {item.name}
                                     </span>
-                                    <span className="w-6 h-6 rounded-full border border-slate-200 flex items-center justify-center text-slate-300 group-hover:border-primary group-hover:text-primary transition-colors">
-                                        <ArrowRightIcon className="w-3 h-3" />
+                                    <span className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 group-hover:border-primary group-hover:text-primary bg-slate-50 group-hover:bg-primary/5 transition-all">
+                                        <ArrowRightIcon className="w-4 h-4" />
                                     </span>
                                 </Link>
-                            ))}
+                            )) : (
+                                <p className="text-center text-slate-500 py-4">No menu items found.</p>
+                            )}
                         </nav>
                     </div>
 
                     {/* Footer Actions */}
-                    <div className="p-8 bg-slate-50/50 space-y-6">
+                    <div className="p-8 bg-slate-50 border-t border-slate-100 space-y-6 mt-auto">
                         <Link href="/contact" onClick={() => setOpen(false)} className="block w-full">
-                            <Button className="w-full rounded-full h-14 text-lg font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">
+                            <Button className="w-full rounded-full h-14 text-lg font-bold shadow-md shadow-primary/20 hover:shadow-primary/30 transition-all bg-primary text-white">
                                 {t('book')}
                             </Button>
                         </Link>
@@ -78,7 +79,7 @@ export const MobileMenu = ({ navLinks }: MobileMenuProps) => {
                                 <p>Bahnhofstrasse 10</p>
                                 <p>Zurich, Switzerland</p>
                             </div>
-                            <div className="flex gap-4 items-center">
+                            <div className="scale-90 origin-right">
                                 <LanguageSwitcher />
                             </div>
                         </div>

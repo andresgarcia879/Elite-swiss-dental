@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, Activity } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
@@ -78,6 +78,8 @@ const Header = () => {
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                            <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+                            <SheetDescription className="sr-only">Navigation links for mobile devices</SheetDescription>
                             <nav className="flex flex-col gap-4 mt-8">
                                 {navLinks.map((item) => (
                                     <Link

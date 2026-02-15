@@ -28,13 +28,13 @@ const Footer = () => {
                             {t("brand_description")}
                         </p>
                         <div className="flex gap-4 mt-2">
-                            <Link href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors">
+                            <Link href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors" aria-label="Instagram">
                                 <Instagram className="size-5 text-slate-300" />
                             </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors">
+                            <Link href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors" aria-label="Facebook">
                                 <Facebook className="size-5 text-slate-300" />
                             </Link>
-                            <Link href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors">
+                            <Link href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors" aria-label="LinkedIn">
                                 <Linkedin className="size-5 text-slate-300" />
                             </Link>
                         </div>

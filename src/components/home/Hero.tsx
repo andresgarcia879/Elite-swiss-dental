@@ -85,7 +85,7 @@ export const Hero = () => {
 
                     {/* Headline */}
                     <div className="flex flex-col">
-                        <h1 className="hero-text-element font-serif text-5xl md:text-6xl lg:text-[5.5rem] font-medium text-slate-900 leading-[1.05] tracking-tight">
+                        <h1 className="hero-text-element font-serif text-4xl md:text-6xl lg:text-[5.5rem] font-medium text-slate-900 leading-[1.05] tracking-tight">
                             {t("title_part1")} <br />
                             {t("title_part2")} <br />
                             <span className="italic text-primary font-serif relative">

@@ -194,9 +194,9 @@ export const Hero = () => {
                     </div>
 
                     {/* Floating "Swiss Certified" Card */}
-                    <div className="hero-floating-card absolute bottom-24 -left-4 md:-left-8 lg:bottom-32 lg:-left-12 bg-white/90 backdrop-blur-xl border border-white/60 p-5 pr-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center gap-5 z-20 max-w-[320px] hover:scale-105 transition-transform duration-300">
-                        <div className="w-14 h-14 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 shadow-inner">
-                            <CheckCircle className="size-7" strokeWidth={2.5} />
+                    <div className="hero-floating-card absolute -bottom-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-24 md:-left-8 lg:bottom-32 lg:-left-12 bg-white/90 backdrop-blur-xl border border-white/60 p-4 pr-6 md:p-5 md:pr-8 rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center gap-3 md:gap-5 z-20 w-max hover:scale-105 transition-transform duration-300">
+                        <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-indigo-50 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                            <CheckCircle className="size-5 md:size-7" strokeWidth={2.5} />
                         </div>
                         <div>
                             <p className="text-[11px] font-extrabold text-slate-400 uppercase tracking-widest mb-1">

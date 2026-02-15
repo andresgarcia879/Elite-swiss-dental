@@ -25,7 +25,7 @@ export const MobileMenu = ({ navLinks }: MobileMenuProps) => {
                     <span className="sr-only">Open menu</span>
                 </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-[400px] border-l-0 p-0 z-[100] bg-white">
+            <SheetContent side="right" showCloseButton={false} className="w-full sm:w-[400px] border-l-0 p-0 bg-white">
                 <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                 <SheetDescription className="sr-only">Main Navigation</SheetDescription>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
@@ -44,6 +44,7 @@ interface BookingWizardProps {
 
 export default function BookingWizard({ initialDoctors, initialSpecialties }: BookingWizardProps) {
     const t = useTranslations("Booking");
+    const locale = useLocale();
 
     // Steps: 1. Mode Selection (Doctor vs Service), 2. Selection, 3. Date/Time, 4. Details, 5. Success
     const [step, setStep] = useState(1);
@@ -89,19 +90,25 @@ export default function BookingWizard({ initialDoctors, initialSpecialties }: Bo
     const handleNext = () => setStep(prev => prev + 1);
     const handleBack = () => setStep(prev => prev - 1);
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (withPayment: boolean) => {
         setSubmissionStatus("submitting");
         const result = await createBooking({
             ...formData,
             doctorId: selectedDoctor!.id,
             serviceId: selectedService!.id,
             date: date!,
-            time: timeSlot!
+            time: timeSlot!,
+            withPayment,
+            locale
         });
 
         if (result.success) {
-            setSubmissionStatus("success");
-            setStep(5);
+            if (result.checkoutUrl) {
+                window.location.href = result.checkoutUrl;
+            } else {
+                setSubmissionStatus("success");
+                setStep(5);
+            }
         } else {
             setSubmissionStatus("error");
         }
@@ -414,10 +421,6 @@ export default function BookingWizard({ initialDoctors, initialSpecialties }: Bo
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
-                </div>
-
-                <div className="space-y-2">
-                    <Label htmlFor="notes">Notes (Optional)</Label>
                     <Textarea
                         id="notes"
                         placeholder="Any specific concerns or questions?"
@@ -428,17 +431,28 @@ export default function BookingWizard({ initialDoctors, initialSpecialties }: Bo
                 </div>
             </div>
 
-            <Button
-                onClick={handleSubmit}
-                disabled={!formData.fullName || !formData.email || !formData.phone || submissionStatus === "submitting"}
-                className="w-full bg-blue-900 hover:bg-blue-800 text-white rounded-full py-6 text-lg shadow-lg relative"
-            >
-                {submissionStatus === "submitting" ? (
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                ) : (
-                    "Confirm Booking"
-                )}
-            </Button>
+            <div className="flex flex-col gap-3 pt-4">
+                <Button
+                    onClick={() => handleSubmit(true)}
+                    disabled={!formData.fullName || !formData.email || !formData.phone || submissionStatus === "submitting"}
+                    className="w-full bg-blue-900 hover:bg-blue-800 text-white rounded-full py-6 text-lg shadow-lg relative"
+                >
+                    {submissionStatus === "submitting" ? (
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                    ) : (
+                        `Pay & Book (CHF ${selectedService?.price || 0})`
+                    )}
+                </Button>
+
+                <Button
+                    onClick={() => handleSubmit(false)}
+                    disabled={!formData.fullName || !formData.email || !formData.phone || submissionStatus === "submitting"}
+                    variant="ghost"
+                    className="w-full text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-full py-3"
+                >
+                    Book without paying now
+                </Button>
+            </div>
         </div>
     );
 

@@ -88,7 +88,7 @@ export async function getAvailableSlots(doctorId: string, date: Date) {
 }
 
 export async function createBooking(data: any) {
-    const { fullName, email, phone, doctorId, serviceId, date, time, notes } = data;
+    const { fullName, email, phone, doctorId, serviceId, date, time, notes, withPayment, locale } = data;
 
     // Combine date and time
     const [hours, minutes] = time.split(':').map(Number);
@@ -112,6 +112,11 @@ export async function createBooking(data: any) {
             }
         });
 
+        // If simple booking without payment, return immediately
+        if (!withPayment) {
+            return { success: true, appointment };
+        }
+
         // Create Stripe Checkout Session
         console.log("Checking Stripe Key:", process.env.STRIPE_SECRET_KEY ? "Present" : "Missing");
 
@@ -121,13 +126,14 @@ export async function createBooking(data: any) {
         }
 
         const origin = (await headers()).get("origin") || "http://localhost:3000";
-        console.log("Origin:", origin);
+        const baseUrl = `${origin}/${locale}`;
+        console.log("Origin:", origin, "BaseURL:", baseUrl);
 
         const checkoutSession = await stripe.checkout.sessions.create({
             mode: "payment",
             payment_method_types: ["card"],
-            success_url: `${origin}/booking/success?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: `${origin}/booking/cancel`,
+            success_url: `${baseUrl}/booking/success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${baseUrl}/booking/cancel`,
             customer_email: email,
             client_reference_id: appointment.id,
             line_items: [
